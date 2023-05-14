@@ -1,0 +1,12 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/inmuebles
+
+###
+POST  {{host}}/api/inmuebles
+
+###
+PUT   {{host}}/api/inmuebles
+
+###
+DELETE   {{host}}/api/inmuebles
