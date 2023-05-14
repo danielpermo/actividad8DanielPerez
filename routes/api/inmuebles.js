@@ -1,10 +1,12 @@
 
 const router = require('express').Router();
+const Inmueble = require('../../model/inmueble.model')
 
 //GET
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        console.log('prueba get')
+        const inmuelbles = await Inmueble.find();
+        res.json(inmuelbles);
     } catch {
         res.json({ fatal: error.message });
     }
