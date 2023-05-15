@@ -11,6 +11,9 @@ const http = require('http');
 //Config .env
 require('dotenv').config();
 
+// Config db
+require('../config/db');
+
 /**
  * Get port from environment and store in Express.
  */

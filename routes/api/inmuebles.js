@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
 });
 
 //PUT
-router.put('/', async (req, res) => {
+router.put('/:inmuebleId', async (req, res) => {
     const { inmuebleId } = req.params;
     try {
         const result = await Inmueble.findByIdAndUpdate(
@@ -36,7 +36,7 @@ router.put('/', async (req, res) => {
 });
 
 //DELETE
-router.delete('/', async (req, res) => {
+router.delete('/:inmuebleId', async (req, res) => {
     const { inmuebleId } = req.params;
 
     try {
