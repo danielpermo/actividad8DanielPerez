@@ -11,4 +11,4 @@ const productSchema = new Schema({
     mail_contacto: String
 }, { timestamps: true, versionKey: false });
 
-module.exports = model('product', productSchema);
+module.exports = model('inmueble', productSchema);

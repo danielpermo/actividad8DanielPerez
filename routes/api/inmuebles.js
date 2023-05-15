@@ -13,27 +13,40 @@ router.get('/', async (req, res) => {
 });
 
 //POST
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     try {
-        console.log('prueba post')
+        const result = await Inmueble.create(req.body);
+        res.json(result);
     } catch {
         res.json({ fatal: error.message });
     }
 });
 
 //PUT
-router.put('/', (req, res) => {
+router.put('/', async (req, res) => {
+    const { inmuebleId } = req.params;
     try {
-        console.log('prueba put')
+        const result = await Inmueble.findByIdAndUpdate(
+            inmuebleId, req.body, { new: true }
+        );
+        res.json(result);
     } catch {
         res.json({ fatal: error.message });
     }
 });
 
 //DELETE
-router.delete('/', (req, res) => {
+router.delete('/', async (req, res) => {
+    const { inmuebleId } = req.params;
+
     try {
-        console.log('prueba delete')
+        const result = await Inmueble.findByIdAndDelete(inmuebleId);
+
+        if (!result) {
+            return res.json({ fatal: 'El id del inmuelbe no existe' });
+        }
+
+        res.json(result);
     } catch {
         res.json({ fatal: error.message });
     }
