@@ -4,9 +4,33 @@ GET {{host}}/api/inmuebles
 
 ###
 POST  {{host}}/api/inmuebles
+Content-Type: application/json
+
+{
+    "inmueble": 1,
+    "piso": 1,
+    "letra": "A",
+    "extension_m2": 80,
+    "numero_habitaciones": 2,
+    "alquilado": true,
+    "nombre_propietario": "Juan Pérez",
+    "mail_contacto": "juan@example.com"
+}
 
 ###
-PUT   {{host}}/api/inmuebles
+PUT   {{host}}/api/inmuebles/646212291ccd6edc97f16b68
+Content-Type: application/json
+
+{
+    "inmueble": 1,
+    "piso": 1,
+    "letra": "A",
+    "extension_m2": 80,
+    "numero_habitaciones": 2,
+    "alquilado": true,
+    "nombre_propietario": "Juan Pérez",
+    "mail_contacto": "juan@example.com"
+}
 
 ###
-DELETE   {{host}}/api/inmuebles
+DELETE   {{host}}/api/inmuebles/646212291ccd6edc97f16b68

@@ -1,8 +1,8 @@
 const { model, Schema } = require('mongoose');
 
 const productSchema = new Schema({
-    inmueble: String,
-    piso: String,
+    inmueble: Number,
+    piso: Number,
     letra: String,
     extension_m2: Number,
     numero_habitaciones: Number,
