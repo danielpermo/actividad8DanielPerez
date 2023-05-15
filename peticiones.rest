@@ -25,11 +25,11 @@ Content-Type: application/json
     "inmueble": 1,
     "piso": 1,
     "letra": "A",
-    "extension_m2": 80,
-    "numero_habitaciones": 2,
+    "extension_m2": 100,
+    "numero_habitaciones": 3,
     "alquilado": true,
     "nombre_propietario": "Juan Pérez",
-    "mail_contacto": "juan@example.com"
+    "mail_contacto": "juanperez@example.com"
 }
 
 ###
